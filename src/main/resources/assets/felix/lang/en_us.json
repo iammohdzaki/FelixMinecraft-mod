@@ -1,3 +1,5 @@
 {
-  "item.felix.ruby": "Ruby"
+  "item.felix.ruby": "Ruby",
+  "itemGroup.felix": "Felix",
+  "block.felix.ruby_block": "Ruby Block"
 }

@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "felix:block/ruby_block" }
+  }
+}

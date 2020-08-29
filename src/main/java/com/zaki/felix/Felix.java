@@ -3,6 +3,8 @@ package com.zaki.felix;
 import com.zaki.felix.util.RegistryHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -20,10 +22,9 @@ import org.apache.logging.log4j.Logger;
 import java.util.stream.Collectors;
 
 @Mod("felix")
-public class Felix
-{
+public class Felix {
     private static final Logger LOGGER = LogManager.getLogger();
-    public static final String MOD_ID="felix";
+    public static final String MOD_ID = "felix";
 
     public Felix() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -32,8 +33,18 @@ public class Felix
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void setup(final FMLCommonSetupEvent event) { }
+    private void setup(final FMLCommonSetupEvent event) {
+    }
 
-    private void doClientStuff(final FMLClientSetupEvent event) { }
+    private void doClientStuff(final FMLClientSetupEvent event) {
+    }
+
+    //Custom Tab Group
+    public static final ItemGroup TAB = new ItemGroup("felix") {
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(RegistryHandler.RUBY.get());
+        }
+    };
 
 }
