@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "exe",
+    "exe",
+    "ese"
+  ],
+  "key": {
+    "x": {
+      "item": "felix:ruby"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "felix:ruby_sword",
+    "count": 1
+  }
+}

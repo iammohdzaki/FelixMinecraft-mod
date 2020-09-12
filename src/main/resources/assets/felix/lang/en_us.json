@@ -1,5 +1,8 @@
 {
   "item.felix.ruby": "Ruby",
   "itemGroup.felix": "Felix",
-  "block.felix.ruby_block": "Ruby Block"
+  "block.felix.ruby_block": "Ruby Block",
+  "item.felix.ruby_sword": "Ruby Sword",
+  "item.felix.ruby_pickaxe": "Ruby PickAxe",
+  "item.felix.ruby_axe": "Ruby Axe"
 }

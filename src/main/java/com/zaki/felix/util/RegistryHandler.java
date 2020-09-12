@@ -4,8 +4,12 @@ import com.zaki.felix.Felix;
 import com.zaki.felix.blocks.BlockItemBase;
 import com.zaki.felix.blocks.RubyBlock;
 import com.zaki.felix.items.ItemBase;
+import com.zaki.felix.tools.ModItemTier;
 import net.minecraft.block.Block;
+import net.minecraft.item.AxeItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.SwordItem;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
@@ -23,6 +27,14 @@ public class RegistryHandler {
 
     //Ruby Item
     public static final RegistryObject<Item> RUBY = ITEMS.register("ruby", ItemBase::new);
+
+    //Ruby Tools
+    public static final RegistryObject<SwordItem> RUBY_SWORD = ITEMS.register("ruby_sword", () ->
+            new SwordItem(ModItemTier.RUBY, 2, -2.4F, new Item.Properties().group(Felix.TAB)));
+    public static final RegistryObject<PickaxeItem> RUBY_PICK_AXE = ITEMS.register("ruby_pickaxe", () ->
+            new PickaxeItem(ModItemTier.RUBY, 0, -2.8F, new Item.Properties().group(Felix.TAB)));
+    public static final RegistryObject<AxeItem> RUBY_AXE = ITEMS.register("ruby_axe", () ->
+            new AxeItem(ModItemTier.RUBY, 5, -3.1F, new Item.Properties().group(Felix.TAB)));
 
     //Ruby Block
     public static final RegistryObject<Block> RUBY_BLOCK = BLOCKS.register("ruby_block", RubyBlock::new);
